@@ -44,14 +44,51 @@
                     Facebook="https://facebook.com",
             },
         };
+
+        public static List<Product> products = new List<Product>
+        {
+            new Product()
+            {
+                    Id = 1,
+                    Name = "Ronaldo",
+                    Image = "images/avatar/bg-1.png",
+                    Price = 10000,
+                    SalePrice=5000,
+                    Description="Ronaldo"
+            },
+               new Product()
+            {
+                    Id = 2,
+                    Name = "Ronaldo",
+                    Image = "images/avatar/bg-1.png",
+                    Price = 10000,
+                    SalePrice=5000,
+                    Description="Ronaldo"
+            },
+               new Product()
+            {
+                    Id = 3,
+                    Name = "Ronaldo",
+                    Image = "images/avatar/bg-1.png",
+                    Price = 10000,
+                    SalePrice=5000,
+                    Description="Ronaldo"
+            },
+
+        };
+
         public static List<Account> GetAccounts()
         {
             return accounts;
         }
-        public static Account? GetAccountById(int id)
+        public static List<Product> GetProduct()
         {
-            var account = GetAccounts().FirstOrDefault(p => p.Id == id);
-            return account;
+            return products;
+        }
+        public static Product? GetProductById(int id)
+        {
+            var p = GetProduct().FirstOrDefault(p => p.Id == id);
+            return p;
         }
 
 

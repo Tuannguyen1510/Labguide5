@@ -16,7 +16,8 @@ namespace Labguide5.Controllers
         // GET: ProductController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var p = DataLocal.GetProductById(id);
+            return View(p);
         }
 
         // GET: ProductController/Create
